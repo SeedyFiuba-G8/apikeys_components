@@ -1,0 +1,19 @@
+{
+	"name": "@seedyfiuba/apikeys_components",
+	"version": "1.0.0",
+	"description": "Seedy FIUBA API Keys Components",
+	"main": "index.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SeedyFiuba-G8/apikeys_components.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SeedyFiuba-G8/apikeys_components/issues"
+	},
+	"homepage": "https://github.com/SeedyFiuba-G8/apikeys_components#readme",
+	"dependencies": {}
+}
