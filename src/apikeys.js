@@ -1,8 +1,5 @@
 module.exports = async function $apikeys(config, fetch, logger, urlFactory) {
-	if (
-		process.env.NODE_ENV === 'test' ||
-		process.env.NODE_ENV === 'development'
-	)
+	if (!config?.apikeys?.enabled)
 		return {
 			core: 'core-fake-apikey',
 			sc: 'sc-fake-apikey',
