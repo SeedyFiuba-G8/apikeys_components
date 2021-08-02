@@ -1,5 +1,5 @@
 module.exports = async function $apikeys(config, fetch, logger, urlFactory) {
-	if (!config?.apikeys?.enabled)
+	if (!config?.services?.apikeys?.enabled)
 		return {
 			core: 'core-fake-apikey',
 			sc: 'sc-fake-apikey',

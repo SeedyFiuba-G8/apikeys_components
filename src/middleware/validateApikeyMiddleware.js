@@ -7,7 +7,7 @@ module.exports = function $validateApikeyMiddleware(
 	urlFactory
 ) {
 	return async function validateApikeyMiddleware(req, res, next) {
-		if (!config?.apikeys?.enabled) return next();
+		if (!config?.services?.apikeys?.enabled) return next();
 
 		const apikeyHeader = config.services?.apikeys?.header;
 		if (!apikeyHeader)
