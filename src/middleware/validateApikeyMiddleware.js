@@ -20,13 +20,11 @@ module.exports = function $validateApikeyMiddleware(
 		// We check if it is cached
 		if (cache.exists(apikey)) return next();
 
-		console.log('No existe en la memoria!');
-
 		// We try to validate it
 		const { baseUrl, key } = config.services.apikeys;
 		const url = urlFactory('/auth', baseUrl);
 		const headers = { [key.name]: key.value };
-		console.log('haciendo fetch!');
+
 		try {
 			await fetch(url, {
 				method: 'POST',
@@ -36,7 +34,6 @@ module.exports = function $validateApikeyMiddleware(
 				headers,
 			});
 		} catch (err) {
-			console.log('fetch dio error:', err);
 			return next(errors.create(404, 'Service not found'));
 		}
 
